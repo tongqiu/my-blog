@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from . import views
+from blog.views.base import BaseView
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', BaseView.as_view(), name='base'),
 ]

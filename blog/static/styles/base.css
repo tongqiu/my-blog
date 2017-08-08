@@ -1,0 +1,33 @@
+.menu-button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1;
+}
+
+.menu {
+    background-color: red;
+    height: 100%;
+    width: 300px;
+    float: right;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.content {
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+    text-align: center;
+    border: solid 5px blue;
+}
+
+.hidden {
+    display: none;
+}

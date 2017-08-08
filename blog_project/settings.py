@@ -11,11 +11,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-# SECURITY WARNING: change this before deploying to production!
-SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'secret')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
 # Application definition
 
@@ -26,6 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_static_jquery',
     'blog'
 )
 
@@ -48,7 +47,7 @@ ROOT_URLCONF = 'blog_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['blog/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'debug': True,
@@ -121,8 +120,9 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 # Simplified static file serving.
