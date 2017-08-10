@@ -1,12 +1,48 @@
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+}
+
 .menu-button {
     position: absolute;
     right: 15px;
     top: 15px;
     z-index: 1;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.5s;
+    background-color: #e6e6e6;
+    border-radius: 2px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+    background-color: #1a1a1a;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+    background-color: #1a1a1a;
 }
 
 .menu {
-    background-color: red;
+    background-color: #e6e6e6;
     height: 100%;
     width: 300px;
     float: right;
@@ -21,13 +57,29 @@
 }
 
 .content {
-    height: 200px;
-    background-color: yellow;
+    height: 100%;
     display: flex;
     text-align: center;
-    border: solid 5px blue;
+}
+
+.heading {
+    opacity: 1;
+    margin: auto;
+    color: #E8E8E8;
+    font-size: 64px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    cursor: pointer;
+}
+
+.heading:hover span{
+    display: none;
+}
+
+.heading:hover:before {
+  content: 'quoting';
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    transition: 0.4s;
 }
