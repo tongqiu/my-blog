@@ -1,0 +1,32 @@
+.homepage {
+    margin: auto;
+    color: #E8E8E8;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.homepage-heading {
+    color: #E8E8E8;
+    font-size: 64px;
+}
+
+.homepage-name {
+    cursor: pointer;
+}
+
+.homepage-name:hover span{
+    display: none;
+}
+
+.homepage-name:hover:before {
+    content: 'quoting';
+}
+
+.homepage-author {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.homepage-text {
+    font-size: 18px;
+    font-style: italic;
+}

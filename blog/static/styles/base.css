@@ -43,7 +43,7 @@ body {
 
 .menu {
     background-color: #e6e6e6;
-    height: 100%;
+    height: 100vh;
     width: 300px;
     float: right;
     display: flex;
@@ -53,33 +53,17 @@ body {
     .menu {
         height: 300px;
         width: 100%;
+        float: none;
     }
 }
 
 .content {
-    height: 100%;
+    height: 100vh;
     display: flex;
     text-align: center;
-}
-
-.heading {
-    opacity: 1;
-    margin: auto;
-    color: #E8E8E8;
-    font-size: 64px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    cursor: pointer;
-}
-
-.heading:hover span{
-    display: none;
-}
-
-.heading:hover:before {
-  content: 'quoting';
+    padding: 20px;
 }
 
 .hidden {
-    opacity: 0;
-    transition: 0.4s;
+    display: none;
 }

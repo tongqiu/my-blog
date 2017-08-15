@@ -8,4 +8,12 @@ $(document).ready(function() {
             $("#menu").addClass("hidden");
         }
     });
+
+    $("#homepageName").click(function(){
+        if ($("#homepageQuote").hasClass("hidden")) {
+            $("#homepageQuote").removeClass("hidden");
+            $(this).text("quoting");
+            $(this).removeClass("homepage-name");
+        }
+    });
 });

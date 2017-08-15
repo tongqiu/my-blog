@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/homepage.css' %}" />
     <script type="text/javascript" src="{% static 'static_jquery/js/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'javascript/base.js' %}"></script>
     <title>Tong Qiu</title>
@@ -10,16 +12,13 @@
 
   <body class="base-page">
       <div id="menuButton" class="menu-button">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
       </div>
-      <div id="menu" class="menu hidden">
-      </div>
+      <div id="menu" class="menu hidden"></div>
       <div class="content">
-          <div class="heading">
-              <span>tong qiu</span>
-          </div>
+          {% block content %}{% endblock %}
       </div>
   </body>
 </html>

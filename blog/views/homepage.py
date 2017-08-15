@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
-class BaseView(TemplateView):
-    template_name = 'base.html'
+class HomepageView(TemplateView):
+    template_name = 'homepage.html'
