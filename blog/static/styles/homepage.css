@@ -1,11 +1,10 @@
 .homepage {
     margin: auto;
-    color: #E8E8E8;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    max-width: 800px;
+    text-align: center;
 }
 
 .homepage-heading {
-    color: #E8E8E8;
     font-size: 64px;
 }
 

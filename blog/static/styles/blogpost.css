@@ -1,0 +1,38 @@
+.blogpost {
+    max-width: 800px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+.blogpost a {
+    text-decoration: none;
+    color: #E8E8E8;
+    border-bottom: solid 1px;
+}
+
+.blogpost-date {
+    font-size: 18px;
+}
+
+.blogpost-content {
+    font-size: 16px;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: solid 1px;
+}
+
+.blogpost-footer {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding-bottom: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .blogpost {
+        margin-top: 55px;
+    }
+}

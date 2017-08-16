@@ -1,5 +1,13 @@
 from django.db import models
-from django.db.models import permalink
+from django.urls import reverse
+
+class Quote(models.Model):
+    author = models.CharField(max_length=120)
+    text = models.TextField()
+    created_datetime = models.DateTimeField(db_index=True, auto_now_add=True)
+
+    def __str__(self):
+        return '{}_{}'.format(self.author, self.id)
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=120)
@@ -8,6 +16,5 @@ class BlogPost(models.Model):
     created_datetime = models.DateTimeField(db_index=True, auto_now_add=True)
     updated_datetime = models.DateTimeField(auto_now=True)
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view-blog-post', [self.slug])
+    def __str__(self):
+        return self.slug

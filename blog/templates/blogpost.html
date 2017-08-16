@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blogpost">
+    <h1>{{title}}</h1>
+    <p class="blogpost-date">{{publish_date}}</p>
+    <div class="blogpost-content">
+      {{content|safe}}
+    </div>
+    <p class="blogpost-footer">
+      Thanks for reading! Got a comment? Please drop me a line at
+        <a href="mailto:tongqiu42@gmail">tongqiu42@gmail.com</a> .
+    </p>
+</div>
+{% endblock %}

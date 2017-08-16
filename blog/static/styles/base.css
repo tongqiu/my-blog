@@ -1,6 +1,8 @@
 body {
     background-color: #1a1a1a;
+    color: #E8E8E8;
     margin: 0;
+    font-family: Georgia, serif;
 }
 
 .menu-button {
@@ -49,21 +51,25 @@ body {
     display: flex;
 }
 
+.content {
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
 @media screen and (max-width: 768px) {
     .menu {
         height: 300px;
         width: 100%;
         float: none;
     }
-}
 
-.content {
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    padding: 20px;
-}
-
-.hidden {
-    display: none;
+    .content {
+        padding: 30px;
+    }
 }
