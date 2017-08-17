@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blogfeed">
+  <h1 class="blogfeed-header">Blog Posts</h1>
+  <div class="blogfeed-body">
+    {% for post in blog_feed %}
+      <div class="blogfeed-post">
+        <div class="blogfeed-post-header">
+          <div class="blogfeed-post-header-elem blogfeed-post-title"><b>{{ post.title }}</b></div>
+          <div class="blogfeed-post-header-elem blogfeed-post-date">{{ post.date }}</div>
+        </div>
+        <div class="blogfeed-post-text">
+          {{ post.text|safe }} ... <a href="{{post.link}}"><b>Read More</b></a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

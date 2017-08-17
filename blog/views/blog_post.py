@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from blog.models import BlogPost
 
 class BlogPostView(TemplateView):
-    template_name = 'blogpost.html'
+    template_name = 'blog_post.html'
     blogpost = None
 
     def get(self, request, slug):
