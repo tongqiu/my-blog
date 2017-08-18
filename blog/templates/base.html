@@ -18,7 +18,13 @@
           <div class="bar2"></div>
           <div class="bar3"></div>
       </div>
-      <div id="menu" class="menu hidden"></div>
+      <div id="menu" class="menu hidden">
+        <ul>
+          {% for menu_item in menu %}
+            <a href="{{menu_item.link}}"><li>{{menu_item.name}}</li></a>
+          {% endfor %}
+        </ul>
+      </div>
       <div class="content">
           {% block content %}{% endblock %}
       </div>

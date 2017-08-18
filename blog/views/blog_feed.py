@@ -1,10 +1,10 @@
 from django.http import HttpResponse
-from django.views.generic import TemplateView
 from django.urls import reverse
 
 from blog.models import BlogPost
+from blog.views.base import BaseView
 
-class BlogFeedView(TemplateView):
+class BlogFeedView(BaseView):
     template_name = 'blog_feed.html'
 
     def get_context_data(self, **kwargs):

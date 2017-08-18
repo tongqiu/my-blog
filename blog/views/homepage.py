@@ -1,9 +1,9 @@
 from django.http import HttpResponse
-from django.views.generic import TemplateView
 
 from blog.models import Quote
+from blog.views.base import BaseView
 
-class HomepageView(TemplateView):
+class HomepageView(BaseView):
     template_name = 'homepage.html'
 
     def get_context_data(self, **kwargs):

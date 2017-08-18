@@ -1,9 +1,9 @@
 from django.http import HttpResponse
-from django.views.generic import TemplateView
 
 from blog.models import BlogPost
+from blog.views.base import BaseView
 
-class BlogPostView(TemplateView):
+class BlogPostView(BaseView):
     template_name = 'blog_post.html'
     blogpost = None
 
