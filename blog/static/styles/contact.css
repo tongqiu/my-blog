@@ -1,0 +1,16 @@
+.contact {
+    margin: auto;
+    text-align: center;
+}
+
+.contact a {
+    border-bottom: none;
+}
+
+.contact-logo {
+    width: 50px;
+}
+
+.contact-section {
+    margin-bottom: 50px;
+}

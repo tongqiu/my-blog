@@ -23,7 +23,7 @@ PAGES = [
     {
         'name': 'Contact',
         'template': 'contact.html',
-        'link': '/'
+        'link': '/contact/'
     },
 ]
 

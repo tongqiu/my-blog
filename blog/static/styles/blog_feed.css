@@ -3,8 +3,9 @@
 }
 
 .blogfeed-header {
-    margin-top: 33px;
+    margin-top: 45px;
     margin-bottom: 63px;
+    text-align: center;
 }
 
 .blogfeed-body {
@@ -52,7 +53,7 @@
     .blogfeed-body {
         max-width: 100%;
     }
-    
+
     .blogfeed-post-header {
         height: 100%;
         position: inherit;
