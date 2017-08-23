@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="homepage">
-    <div id="homepageName" class="homepage-heading homepage-name">
-        <span>tong qiu</span>
-    </div>
-    <div id="homepageQuote" class="homepage-quote hidden">
-        <div class="homepage-author">
-            {{author}}
+<div class="homepage-container">
+    <div class="homepage">
+        <div id="homepageName" class="homepage-heading homepage-name">
+            <span>tong qiu</span>
         </div>
-        <p>...</p>
-        <p class="homepage-text">
-            “{{text}}”
-        </p>
+        <div id="homepageQuote" class="homepage-quote hidden">
+            <div class="homepage-author">
+                {{author}}
+            </div>
+            <p>...</p>
+            <p class="homepage-text">
+                “{{text}}”
+            </p>
+        </div>
     </div>
-</div>
+</div>    
 {% endblock %}

@@ -15,6 +15,8 @@
     margin-top: 40px;
     padding-top: 15px;
     border-top: solid 1px;
+    border-bottom: solid 1px;
+    padding-bottom: 15px;
     line-height: 20px;
 }
 
@@ -24,4 +26,36 @@
     margin-top: 50px;
     margin-bottom: 80px;
     padding-bottom: 3px;
+}
+
+.blogpost-nav {
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+}
+
+.blogpost-nav a {
+    border-bottom: none;
+}
+
+.blogpost-nav-item {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.blogpost-nav-item:first-child {
+    margin-left: 0;
+}
+
+.blogpost-nav-item:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 375px) {
+    .blogpost-nav-item-description {
+        display: none;
+    }
 }

@@ -7,22 +7,22 @@ from django.views.generic import TemplateView
 PAGES = [
     {
         'name': 'Home',
-        'template': 'homepage.html',
+        'templates': ['homepage.html'],
         'link': '/'
     },
     {
         'name': 'About',
-        'template': 'about.html',
+        'templates': ['about.html'],
         'link': '/'
     },
     {
         'name': 'Blog',
-        'template': 'blog_feed.html',
+        'templates': ['blog_feed.html', 'blog_post.html'],
         'link': '/blog/'
     },
     {
         'name': 'Contact',
-        'template': 'contact.html',
+        'templates': ['contact.html'],
         'link': '/contact/'
     },
 ]
@@ -32,5 +32,5 @@ class BaseView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['menu'] = [m for m in PAGES if m['template'] != self.template_name]
+        context['menu'] = [m for m in PAGES if self.template_name not in m['templates']]
         return context

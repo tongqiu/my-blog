@@ -7,9 +7,24 @@
     <div class="blogpost-content">
       {{content|safe}}
     </div>
-    <p class="blogpost-footer">
-      Thanks for reading! Got a comment? Please drop me a line at
-        <a href="mailto:tongqiu42@gmail">tongqiu42@gmail.com</a> .
-    </p>
+    <div class="blogpost-nav">
+        {% if previous_post_link and previous_post_title %}
+            <div class= "blogpost-nav-item">
+                <a href="{{previous_post_link}}">
+                    <span class="chevron left"></span><span class="blogpost-nav-item-description">{{previous_post_title}}</span>
+                </a>
+            </div>
+        {% endif %}
+        <div class= "blogpost-nav-item">
+            <a href="/blog/">Back to all posts</a>
+        </div>
+        {% if next_post_link and next_post_title %}
+            <div class= "blogpost-nav-item">
+                <a href="{{next_post_link}}">
+                    <span class="blogpost-nav-item-description">{{next_post_title}}</span><span class="chevron right"></span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

@@ -1,28 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="contact">
-  <h1 class="contact-section">Get in touch!</h1>
-    <div class="contact-section">
-      <a href="mailto:tongqiu42@gmail">
-        {% load static %}
-        <img src="{% static "imgs/email.png" %}" class="contact-logo" />
-        <p>tongqiu42@gmail.com</p>
-      </a>
-    </div>
-    <div class="contact-section">
-      <a href="https://www.instagram.com/misqu0ting/">
-        {% load static %}
-        <img src="{% static "imgs/instagram.png" %}" class="contact-logo" />
-        <p>@misqu0ting</p>
-      </a>
-    </div>
-    <div class="contact-section">
-      <a href="https://www.linkedin.com/in/tong-qiu-00b4493b/">
-        {% load static %}
-        <img src="{% static "imgs/linkedin.png" %}" class="contact-logo" />
-        <p>tong-qiu-00b4493b</p>
-      </a>
+<div class="contact-container">
+    <div class="contact">
+        <h1 class="contact-section">Get in touch!</h1>
+        <div class="contact-section">
+            <a href="mailto:tongqiu42@gmail">
+                {% load static %}
+                  <img src="{% static "imgs/email.png" %}" class="contact-logo" />
+                  <p>tongqiu42@gmail.com</p>
+            </a>
+        </div>
+        <div class="contact-section">
+            <a href="https://www.instagram.com/misqu0ting/">
+                {% load static %}
+                <img src="{% static "imgs/instagram.png" %}" class="contact-logo" />
+                <p>@misqu0ting</p>
+            </a>
+        </div>
+        <div class="contact-section">
+            <a href="https://www.linkedin.com/in/tong-qiu-00b4493b/">
+                {% load static %}
+                <img src="{% static "imgs/linkedin.png" %}" class="contact-logo" />
+                <p>tong-qiu-00b4493b</p>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}

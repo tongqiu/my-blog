@@ -77,7 +77,6 @@ body {
 }
 
 .content {
-    height: 100vh;
     display: flex;
     padding: 30px;
 }
@@ -123,5 +122,9 @@ body {
 
     .content {
         padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 34px;
     }
 }
