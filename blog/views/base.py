@@ -13,7 +13,7 @@ PAGES = [
     {
         'name': 'About',
         'templates': ['about.html'],
-        'link': '/'
+        'link': '/about/'
     },
     {
         'name': 'Blog',

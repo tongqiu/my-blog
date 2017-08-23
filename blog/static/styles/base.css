@@ -89,6 +89,10 @@ body {
     font-size: 42px;
 }
 
+.content p {
+    line-height: 20px;
+}
+
 .hidden {
     display: none;
 }
@@ -112,6 +116,10 @@ body {
     .menu li {
         padding: 10px 0;
     }
+
+    .content h1 {
+        font-size: 34px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -122,9 +130,5 @@ body {
 
     .content {
         padding: 20px;
-    }
-
-    .content h1 {
-        font-size: 34px;
     }
 }
