@@ -2,6 +2,7 @@ dj-database-url==0.4.1
 django-static-jquery==2.1.4
 Django==1.11
 gunicorn==19.6.0
+markdown==2.6.9
 newrelic==2.90.0.75
 psycopg2==2.6.2
 requests==2.9.1

@@ -1,3 +1,5 @@
+import markdown
+
 from django.http import HttpResponse
 from django.urls import reverse
 
@@ -29,7 +31,8 @@ class BlogPostView(BaseView):
 
             context.update({
                 'title': self.blogpost.title,
-                'content': self.blogpost.content,
+                'content': markdown.markdown(self.blogpost.content,
+                                             extensions=['markdown.extensions.nl2br']),
                 'publish_date': self.blogpost.created_datetime.strftime('%d %B %Y')
             })
 
