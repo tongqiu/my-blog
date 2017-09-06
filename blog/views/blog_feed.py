@@ -1,3 +1,5 @@
+import markdown
+
 from django.http import HttpResponse
 from django.urls import reverse
 
@@ -12,7 +14,8 @@ class BlogFeedView(BaseView):
         blog_posts = BlogPost.objects.all().order_by('-created_datetime')
         blog_feed = []
         for post in blog_posts:
-            words = post.content.split(' ')
+            content = markdown.markdown(post.content)
+            words = content.split(' ')
             excerpt = ' '.join(words[:60])
             if excerpt.endswith('.'):
                 excerpt = excerpt[:-1]
