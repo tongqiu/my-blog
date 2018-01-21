@@ -90,7 +90,12 @@ body {
 }
 
 .content p {
-    line-height: 22px;
+    line-height: 25px;
+}
+
+.content sup {
+  vertical-align: text-bottom;
+  font-size: 10px;
 }
 
 .hidden {
